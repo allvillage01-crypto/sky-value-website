@@ -7,6 +7,8 @@ export const company = {
   founded: "2024年7月11日",
   address: "東京都港区南青山二丁目1番36号 青山丸竹ビル6F",
   capital: "100万円",
+  representative: "成吉 統基",
+  contactEmail: "info@skyvalue.jp",
 };
 
 export const hero = {

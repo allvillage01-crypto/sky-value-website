@@ -8,6 +8,7 @@ const ROWS: [string, string][] = [
   ["設立", company.founded],
   ["所在地", company.address],
   ["資本金", company.capital],
+  ["代表者", company.representative],
 ];
 
 export default function Company() {
@@ -44,7 +45,7 @@ export default function Company() {
               ))}
             </dl>
             <p className="mt-6 text-xs text-muted/80">
-              ※代表者・主たる事業内容は確認中のため、確定後に掲載いたします。
+              ※主たる事業内容は確認中のため、確定後に掲載いたします。
             </p>
           </Reveal>
         </div>
