@@ -29,7 +29,6 @@ export default function About() {
             <p className="mt-6 text-sm leading-loose text-muted sm:text-base">
               {about.body}
             </p>
-            <p className="mt-6 text-xs text-muted/80">{about.note}</p>
           </Reveal>
         </div>
       </div>
