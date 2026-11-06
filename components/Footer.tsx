@@ -13,6 +13,12 @@ export default function Footer() {
             className="object-contain"
           />
         </div>
+        <a
+          href="/privacy/"
+          className="text-xs tracking-wide text-white/50 underline-offset-4 hover:text-white hover:underline"
+        >
+          プライバシーポリシー
+        </a>
         <p className="text-xs tracking-wide text-white/40">
           &copy; {new Date().getFullYear()} {company.name}
         </p>
