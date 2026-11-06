@@ -45,7 +45,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className={`text-sm font-en tracking-wide transition-colors ${
+              className={`nav-link text-sm font-en tracking-wide transition-colors ${
                 solid ? "text-ink hover:text-accent" : "text-white hover:text-accent"
               }`}
             >

@@ -12,13 +12,13 @@ export default function About() {
         </Reveal>
 
         <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
-          <Reveal className="relative order-2 aspect-[4/3] overflow-hidden rounded-sm md:order-1">
+          <Reveal className="group relative order-2 aspect-[4/3] overflow-hidden rounded-sm md:order-1">
             <Image
               src="/images/about_team.webp"
               alt="Sky Value株式会社が目指す協業のイメージ"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </Reveal>
 

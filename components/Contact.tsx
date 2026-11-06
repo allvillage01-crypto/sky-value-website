@@ -16,7 +16,7 @@ export default function Contact() {
           </p>
           <a
             href={`mailto:${company.contactEmail}`}
-            className="mt-8 inline-block rounded-full bg-accent px-8 py-3 text-sm font-en tracking-wide text-white transition-opacity hover:opacity-90"
+            className="mt-8 inline-block rounded-full bg-accent px-8 py-3 text-sm font-en tracking-wide text-white shadow-lg shadow-accent/30 transition-all duration-300 hover:scale-105 hover:opacity-90"
           >
             {company.contactEmail}
           </a>

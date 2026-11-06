@@ -24,7 +24,9 @@ export default function SectionHeading({
         {ja}
       </h2>
       <span
-        className={`mt-5 h-px w-12 ${light ? "bg-white/40" : "bg-accent/50"}`}
+        className={`animate-underline mt-5 h-px w-12 ${
+          light ? "bg-white/40" : "bg-accent/50"
+        }`}
       />
     </div>
   );

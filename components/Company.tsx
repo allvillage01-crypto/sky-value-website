@@ -20,13 +20,13 @@ export default function Company() {
         </Reveal>
 
         <div className="mt-16 grid gap-10 md:grid-cols-2 md:gap-16">
-          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          <Reveal className="group relative aspect-[4/3] overflow-hidden rounded-sm">
             <Image
               src="/images/hero_architecture.webp"
               alt=""
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </Reveal>
 

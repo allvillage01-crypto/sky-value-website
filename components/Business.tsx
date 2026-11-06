@@ -23,16 +23,17 @@ export default function Business() {
 
         <div className="mt-16 grid gap-10 md:grid-cols-3">
           {businesses.map((b, i) => (
-            <Reveal key={b.code}>
-              <div className="group flex h-full flex-col overflow-hidden rounded-sm bg-white/5">
+            <Reveal key={b.code} delay={i * 120}>
+              <div className="group flex h-full flex-col overflow-hidden rounded-sm bg-white/5 transition-transform duration-500 hover:-translate-y-2">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={IMAGES[i]}
                     alt=""
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </div>
                 <div className="flex flex-1 flex-col p-7">
                   <span className="font-en text-xs tracking-[0.3em] text-accent">
