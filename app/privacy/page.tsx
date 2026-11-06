@@ -4,12 +4,14 @@ import { company } from "@/data/content";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
-  description: `${company.name}のプライバシーポリシー（雛形）です。`,
+  description: `${company.name}のプライバシーポリシーです。`,
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 };
+
+const ENACTED_DATE = "2026年11月6日";
 
 const SECTIONS: { heading: string; body: string[] }[] = [
   {
@@ -64,13 +66,6 @@ const SECTIONS: { heading: string; body: string[] }[] = [
 export default function PrivacyPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-24">
-      <div className="mb-10 rounded-sm border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed text-ink">
-        <p className="font-bold">※本ページは雛形（ドラフト）です。</p>
-        <p className="mt-1 text-muted">
-          実際の運用実態（取得する情報の範囲、委託先の有無、将来的なツール導入予定など）と齟齬がないか、公開前に必ず内容をご確認・修正のうえ、正式に制定してください。制定日・改定日の記載も未確定です。
-        </p>
-      </div>
-
       <Link
         href="/"
         className="text-sm text-accent hover:underline"
@@ -95,7 +90,7 @@ export default function PrivacyPage() {
         ))}
       </div>
 
-      <p className="mt-16 text-xs text-muted/70">制定日：未定（公開前に確定してください）</p>
+      <p className="mt-16 text-xs text-muted/70">制定日：{ENACTED_DATE}</p>
     </main>
   );
 }
