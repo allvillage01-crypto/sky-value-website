@@ -9,6 +9,7 @@ const ROWS: [string, string][] = [
   ["所在地", company.address],
   ["資本金", company.capital],
   ["代表者", company.representative],
+  ["事業内容", "通信関連事業、営業支援事業"],
 ];
 
 export default function Company() {
@@ -44,9 +45,6 @@ export default function Company() {
                 </div>
               ))}
             </dl>
-            <p className="mt-6 text-xs text-muted/80">
-              ※主たる事業内容は確認中のため、確定後に掲載いたします。
-            </p>
           </Reveal>
         </div>
       </div>
