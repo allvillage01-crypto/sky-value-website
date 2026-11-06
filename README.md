@@ -76,7 +76,13 @@ npm run build
 - 実際に取得済みのドメインは日本語IDNの「スカイバリュー.jp」ではなく、**ローマ字の `skyvalue.jp`**（お問い合わせメールアドレス info@skyvalue.jp と同一ドメイン）でした。IDNではないため、Punycode変換は不要です。
 - ステータス：永久無料、更新期限 2027/03/31、ドメインプロテクション未設定。
 
-**DNS設定・ネームサーバー変更はまだ一切行っていません。** `skyvalue.jp` は現在メール（mail92.onamae.ne.jp）で利用中のため、設定を誤るとメールが受信できなくなるリスクがあります。接続作業を進める前に、お名前.comの「DNS設定」画面で現在登録されているレコード一覧（especially MXレコード）をご確認・共有ください。それをもとに、メールを壊さない手順（Cloudflareへのネームサーバー移管 または 外部DNSのまま値を追加する方法のいずれか）をご提案します。
+**接続方法：メールを一切壊さない安全策で設定済みです。**
+
+- `skyvalue.jp` のDNSゾーン（お名前.com レンタルサーバー側で管理）には、MX・SPF・DKIM・mail/ml-cpのAレコードが既存のため、ネームサーバーの移管やゾーン全体の変更は行っていません。
+- 新規に `www.skyvalue.jp` のCNAMEレコードを追加し、Cloudflare Pages（`sky-value-website.pages.dev`）を指すよう設定しました（既存の `www` のAレコードは削除して置き換え）。
+- ルートドメイン `skyvalue.jp` は、お名前.comの「WWW転送」機能で `www.skyvalue.jp` へ転送する設定にしました（DNSレコードは変更なし）。
+- メール関連のレコード（MX / SPF / DKIM / mail.skyvalue.jp / ml-cp.skyvalue.jp）は一切変更していません。
+- Cloudflare Pages側でカスタムドメイン `www.skyvalue.jp` を登録し、DNS確認待ちの状態です（反映まで数分〜最大24時間、完了するとメール通知が届きます）。
 
 ## 7. 公開前に確認が必要な事項（まとめ）
 
@@ -85,6 +91,6 @@ npm run build
 - [x] 法人番号の表記（非掲載で確定）
 - [x] お問い合わせ送信先メールアドレス（info@skyvalue.jp、mailtoリンクで実装済み）
 - [ ] プライバシーポリシーの内容（`/privacy` に雛形を作成済み。実際の運用実態との齟齬がないか確認のうえ、制定日を確定してください）
-- [ ] 独自ドメイン（skyvalue.jp）のDNS設定 → 既存メール（mail92.onamae.ne.jp）を壊さないよう、現在のDNSレコード一覧の共有待ち
-- [ ] `lib/site.ts` の `SITE_URL`（ドメイン接続後に `https://skyvalue.jp` へ差し替え。OGP・サイトマップ・構造化データに影響）
+- [x] 独自ドメイン（www.skyvalue.jp）のDNS設定 → CNAME追加・WWW転送設定済み、Cloudflare側の有効化待ち（メール通知を待つ）
+- [x] `lib/site.ts` の `SITE_URL`（`https://www.skyvalue.jp` に設定済み）
 - [ ] 各画像がすべてAI生成のコンセプト画像であり、実在の社員・オフィスではないことの社内合意（`Sky_Value_Website_Kit/02_images/IMAGE_MAP.md` 参照）
