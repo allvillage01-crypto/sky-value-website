@@ -91,6 +91,6 @@ npm run build
 - [x] 法人番号の表記（非掲載で確定）
 - [x] お問い合わせ送信先メールアドレス（info@skyvalue.jp、mailtoリンクで実装済み）
 - [ ] プライバシーポリシーの内容（`/privacy` に雛形を作成済み。実際の運用実態との齟齬がないか確認のうえ、制定日を確定してください）
-- [x] 独自ドメイン（www.skyvalue.jp）のDNS設定 → CNAME追加・WWW転送設定済み、Cloudflare側の有効化待ち（メール通知を待つ）
+- [x] 独自ドメイン（www.skyvalue.jp）のDNS設定 → CNAME追加・WWW転送設定済み、Cloudflare側で有効化・動作確認済み
 - [x] `lib/site.ts` の `SITE_URL`（`https://www.skyvalue.jp` に設定済み）
 - [ ] 各画像がすべてAI生成のコンセプト画像であり、実在の社員・オフィスではないことの社内合意（`Sky_Value_Website_Kit/02_images/IMAGE_MAP.md` 参照）
